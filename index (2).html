@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b18">
+  <title>Suscríbete a SONIQ | Tu Mundo, Tu Sonido</title>
+  
+  <!-- Custom Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Hoja de Estilos externa -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- Elementos de fondo animados (Luces Neón Flotantes) -->
+  <div class="bg-glow blob-1" aria-hidden="true"></div>
+  <div class="bg-glow blob-2" aria-hidden="true"></div>
+  <div class="bg-glow blob-3" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <main class="shell">
+    <header class="top">
+      <a href="#" class="logo">SON<span>IQ</span></a>
+      <div class="tag">
+        <span class="pulse-dot"></span> TU MUNDO. TU SONIDO.
+      </div>
+    </header>
+
+    <section class="card" id="card-container" aria-label="Formulario de suscripción SONIQ">
+      <!-- Resplandor al mover el cursor -->
+      <div class="card-glow" id="card-glow"></div>
+
+      <div class="visual">
+        <div class="eyebrow">
+          <svg class="sparkle-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/>
+          </svg>
+          CONECTA CON SONIQ
+        </div>
+        
+        <h1>EL SONIDO<br>QUE TE <span>MUEVE.</span></h1>
+        
+        <p class="intro">Entérate de novedades, lanzamientos y noticias. Suscríbete y acompáñanos en una experiencia hecha para quienes viven el sonido.</p>
+
+        <!-- Ecualizador interactivo animado -->
+        <div class="soundwave" aria-hidden="true" title="Audio Wave Visualizer">
+          <i style="--h:24px; --d:0.1s"></i>
+          <i style="--h:42px; --d:0.3s"></i>
+          <i style="--h:18px; --d:0.2s"></i>
+          <i style="--h:52px; --d:0.5s"></i>
+          <i style="--h:34px; --d:0.4s"></i>
+          <i style="--h:48px; --d:0.1s"></i>
+          <i style="--h:22px; --d:0.6s"></i>
+          <i style="--h:38px; --d:0.3s"></i>
+          <i style="--h:58px; --d:0.2s"></i>
+          <i style="--h:30px; --d:0.5s"></i>
+          <i style="--h:16px; --d:0.4s"></i>
+          <i style="--h:46px; --d:0.1s"></i>
+          <i style="--h:26px; --d:0.3s"></i>
+        </div>
+      </div>
+
+      <div class="form-area">
+        <h2>Únete a SONIQ</h2>
+        <p class="sub">Déjanos tu correo electrónico y recibe nuestro mensaje de bienvenida.</p>
+
+        <form id="soniq-form" novalidate>
+          <div class="input-group">
+            <label for="user_email">Tu correo electrónico</label>
+            <div class="input-wrapper">
+              <input id="user_email" name="user_email" type="email" placeholder="nombre@correo.com" autocomplete="email" required>
+              <svg class="mail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Campo Honeypot para seguridad spam -->
+          <div class="hp" aria-hidden="true">
+            <label for="website">No completar</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button id="submit-btn" type="submit">
+            <span class="btn-text">SUSCRIBIRME</span>
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+            <span class="btn-spinner"></span>
+          </button>
+
+          <p id="status" class="status" role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="note">
+          <svg class="shield-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          Al suscribirte, aceptas recibir novedades y comunicaciones de SONIQ. Cero spam.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <span>&copy; 2026 SONIQ</span> · <span>TU MUNDO. TU SONIDO.</span>
+    </footer>
+  </main>
+
+  <!-- Librería de EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js"></script>
+  <!-- Archivo JavaScript interactivo -->
+  <script src="./script.js"></script>
+</body>
+</html>
